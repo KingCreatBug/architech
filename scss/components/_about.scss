@@ -1,0 +1,35 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.about {
+    @extend %flexItemCenter;
+    gap: 100px;
+    padding: 100px 0;
+    background: #fff;
+
+    &__img {
+        margin-left: 60px;
+        width: 575px;
+        height: 706px;
+        object-fit: cover;
+    }
+}
+
+.about-content {
+    &__title,
+    &__desc {
+        width: 70%;
+    }
+
+    &__desc {
+        margin-top: 24px;
+    }
+
+    &__btn {
+        margin-top: 54px;
+    }
+}

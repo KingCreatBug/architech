@@ -1,0 +1,145 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.our {
+    margin-top: 99px;
+    background: var(--our-bg-color);
+
+    &--prod {
+        margin-top: 0;
+    }
+
+    &__inner {
+        padding: 100px 0;
+
+        &--data {
+            @extend %flexItemCenter;
+            justify-content: space-between;
+        }
+    }
+}
+
+.our-content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__title {
+        color: #fff;
+
+        &--data {
+            width: 50%;
+            font-size: 5.8rem;
+            font-weight: 500;
+            line-height: 1.17;
+            letter-spacing: -1.16px;
+        }
+    }
+
+    &__desc {
+        width: 45%;
+        color: #d6d8d9;
+
+        &--prod {
+            width: 70%;
+            margin-top: 24px;
+        }
+    }
+
+    &__btn {
+        color: #fff;
+        border-color: #d6d8d9;
+    }
+
+    &__icon {
+        position: absolute;
+
+        &--star {
+            top: -10px;
+            left: -17px;
+        }
+
+        &--circle {
+            top: -35px;
+            right: -10px;
+        }
+    }
+}
+
+.our-client {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+
+    margin-top: 100px;
+
+    &__item {
+        height: 60px;
+    }
+}
+
+.our-container {
+    @extend %flexItemCenter;
+    margin-top: -40px;
+    margin-left: 185px;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    &__item + &__item {
+        margin-left: 50px;
+    }
+
+    &__thumb {
+        width: 470px;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    &__title {
+        margin-top: 38px;
+        color: #fff;
+        font-size: 5.8rem;
+        font-weight: 500;
+        letter-spacing: -1.16px;
+    }
+
+    &__desc {
+        height: 102px;
+        margin-top: 14px;
+        color: #d6d8d9;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.our-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 54px 93px;
+
+    &__number {
+        color: #fff;
+        font-size: 5.8rem;
+        font-weight: 600;
+        line-height: 1.17;
+        letter-spacing: -1.16px;
+    }
+
+    &__desc {
+        margin-top: 14px;
+        color: #d6d8d9;
+        font-size: 2.8rem;
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: -1.12px;
+    }
+}

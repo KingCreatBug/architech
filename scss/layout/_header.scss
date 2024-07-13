@@ -1,0 +1,56 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header-inner {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+    padding: 32px 0;
+
+    &__logo {
+        width: 102px;
+        height: 27px;
+    }
+}
+
+.navbar {
+    &__list {
+        @extend %flexItemCenter;
+    }
+
+    &__item {
+        padding: 0 17px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__link {
+        color: var(--text-heading-color);
+        font-size: 2rem;
+        letter-spacing: -0.8px;
+    }
+}
+
+.header-action {
+    &__btn {
+        padding: 13px 31px !important;
+        border-radius: 29px !important;
+        background: var(--text-heading-color);
+        color: #fff !important;
+
+        &:hover {
+            border: 1px solid var(--text-heading-color);
+            background: #f2efed !important;
+            color: var(--text-heading-color) !important;
+        }
+    }
+}

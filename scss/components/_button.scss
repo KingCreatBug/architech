@@ -1,0 +1,45 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 40px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-text-color);
+
+    color: var(--text-heading-color);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    transition: all 0.25s;
+
+    &:hover {
+        color: #f2efed;
+        background: var(--text-heading-color);
+    }
+}
+
+.btn-icon {
+    position: relative;
+}
+
+.btn:hover > .btn-icon path {
+    stroke: #f2efed;
+}
+
+.btn:hover > .btn-icon {
+    rotate: 43deg;
+    animation: arrow;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+    0% {
+        left: 5px;
+    }
+
+    100% {
+        left: 10px;
+    }
+}

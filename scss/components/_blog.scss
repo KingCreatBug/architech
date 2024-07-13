@@ -1,0 +1,77 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.blog {
+    margin: 100px 0;
+}
+
+.blog-content {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+}
+
+.blog-container {
+    @extend %flexItemCenter;
+    gap: 50px;
+    margin-top: 60px;
+    margin-left: 185px;
+    overflow: hidden;
+
+    &__thumb {
+        width: 470px;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    &__date {
+        margin-top: 24px;
+        color: #828282;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: -0.8px;
+    }
+
+    &__title {
+        margin-top: 14px;
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -0.72px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__desc {
+        margin-top: 18px;
+        line-height: 1.67;
+        letter-spacing: -0.36px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__link {
+        @extend %flexItemCenter;
+        gap: 10px;
+        margin-top: 30px;
+
+        color: var(--text-heading-color);
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: -0.8px;
+        transition: 0.35s ease-in;
+
+        &:hover {
+            text-decoration: overline;
+        }
+    }
+}

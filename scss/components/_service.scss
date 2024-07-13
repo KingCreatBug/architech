@@ -1,0 +1,49 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.service {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.service-content {
+    @extend %flexItemCenter;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__desc {
+        margin-top: 24px;
+        width: 65%;
+    }
+}
+
+.service-list {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.service-item {
+    @extend %flexItemCenter;
+    flex-direction: column;
+
+    &__title {
+        margin-top: 51px;
+        font-size: 3.6rem;
+        font-weight: 500;
+        letter-spacing: -0.72px;
+    }
+
+    &__desc {
+        text-align: center;
+        margin-top: 18px;
+        color: #828282;
+    }
+}
